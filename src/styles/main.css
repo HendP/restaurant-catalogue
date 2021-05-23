@@ -35,7 +35,7 @@ body {
 .navbar .navbar-menu button {
   background-color: transparent;
   border: none;
-  font-size: 18px;
+  font-size: 32px;
   padding: 8px;
   cursor: pointer;
   color: white;
@@ -64,10 +64,6 @@ body {
   overflow: hidden;
 }
 
-.navbar .navbar-navigation.open {
-  left: 0;
-}
-
 .navbar .navbar-navigation ul li a {
   display: inline-block;
   text-decoration: none;
@@ -75,6 +71,7 @@ body {
   padding: 8px;
   margin-bottom: 5px;
   width: 100%;
+  font-size: 18px;
 }
 
 /*
@@ -190,6 +187,7 @@ main {
 */
 
 footer {
+  background-color: #f2f2f2;
   padding: 16px;
 }
 
@@ -199,6 +197,6 @@ footer p {
 }
 
 footer p a {
-  color: #db0000;
+  color: #f73859;
   text-decoration: none;
 }
