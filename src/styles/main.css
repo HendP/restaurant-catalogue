@@ -74,16 +74,51 @@ body {
   font-size: 18px;
 }
 
+/* 
+  Hero Image 
+  */
+  
+.hero-image {
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/heros/hero-image_2.jpg");
+  width: 100%;
+  min-height: 420px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.hero-text {
+  margin: 0 auto;
+  max-width: 800px;
+  color: white;
+}
+
+.hero-title {
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero-tagline {
+  font-size: 24px;
+}
+
 /*
     Main Content
 */
 
 main {
-  padding: 32px;
   flex: 1;
 }
 
 .content {
+  padding: 32px;
   margin: 0 auto;
   min-height: 100%;
 }
