@@ -12,8 +12,8 @@ const Home = {
                 </p>
                 </div>
         </div>
-        <div class="content">
-            <h2 class="content-heading">Restaurant Catalagoue</h2>
+        <div class="content" id="content">
+            <h2 class="content-heading"><span>Explore Restaurants</span></h2>
             <div id="restaurants" class="restaurants">
             
             </div>
