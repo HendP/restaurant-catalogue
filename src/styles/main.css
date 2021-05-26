@@ -175,7 +175,7 @@ main {
 }
 
 .restaurant-item a,
-.restaurant-item a:hover{
+.restaurant-item a:hover {
   text-decoration: none;
   color: inherit;
 }
@@ -307,4 +307,36 @@ footer p a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* 
+  Spinner
+ */
+#spinner {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f2f2f2;
+  border-top: 3px solid #f73859;
+  border-radius: 100%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#spinner.show {
+  visibility: visible;
 }
