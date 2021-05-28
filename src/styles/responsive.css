@@ -1,4 +1,4 @@
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 280px) {
 
   .hero-title {
     font-size: 32px;
@@ -8,6 +8,13 @@
     font-size: 18px;
   }
 
+  .card-restaurant-detail .card-text {
+    font-size: 12px;
+  }
+
+  .card-restaurant-detail .category {
+    font-size: 12px;
+  }
 }
 @media screen and (min-width: 650px) {
   .navbar {
@@ -39,22 +46,19 @@
     margin: 0;
   }
 
-  .restaurants {
-    grid-template-columns: 1fr 1fr;
+  .card-restaurant-detail .card-text {
+    font-size: 14px;
   }
 
-  .restaurant {
-    grid-template-columns: auto 1fr;
+  .card-restaurant-detail .category {
+    font-size: 14px;
   }
 
-  .restaurant .restaurant-title {
-    grid-column-start: 1;
+  .description {
+    margin-top: 16px;
+    grid-column-start: 1; 
     grid-column-end: 3;
-  }
-
-  .restaurant .restaurant-overview {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    text-align: justify;
   }
 }
 
@@ -63,6 +67,14 @@
     left: 0;
     height: 100vh;
     margin-top: 20px;
+  }
+
+  .card-content {
+    grid-template-columns: 1fr;
+  }
+
+  .description {
+    text-align: justify;
   }
 }
 

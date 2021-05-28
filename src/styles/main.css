@@ -163,7 +163,7 @@ main {
 }
 
 /*
-    Movie Item
+    Restaurant Item
 */
 
 .restaurant-item {
@@ -233,22 +233,118 @@ main {
     Restaurant
 */
 
-.restaurant {
+.card-restaurant-detail {
   margin: 0 auto;
-  width: 100%;
-  max-width: 800px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-content {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px 16px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
 }
 
-.restaurant .restaurant-image {
+.card-restaurant-detail .restaurant-title {
+  overflow: hidden;
+  font-size: 24px;
+  color: #f73859;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-restaurant-detail .restaurant-title:before,
+.card-restaurant-detail .restaurant-title:after {
+  background-color: #333;
+  color: #333;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.card-restaurant-detail .restaurant-title:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.card-restaurant-detail .restaurant-title:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.card-restaurant-detail .restaurant-image {
   width: 100%;
-  max-width: 400px;
+  border-radius: 5px;
 }
 
-.restaurant .restaurant-info h4 {
-  margin: 8px 0;
+.card-restaurant-detail .card-text {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.card-restaurant-detail .category {
+  display: inline-block;
+  background-color: #f73859;
+  padding: 5px 0;
+  color: #fff;
+  width: 30%;
+  font-size: 16px;
+  border-radius: 30px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.foods,
+.drinks {
+  display: inline-block;
+}
+
+#restaurant-review {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 16px;
+  align-items: stretch;
+}
+
+.review-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.review-content,
+.review-photo {
+  padding: 10px;
+}
+
+.review-photo {
+  font-size: 24px;
+}
+
+.review-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.review-info .review-name{
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.review-info .review-date {
+  font-size: 12px;
+  padding-top: 3px;
 }
 
 /*
