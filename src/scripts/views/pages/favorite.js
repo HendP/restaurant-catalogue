@@ -18,6 +18,7 @@ const Favorite = {
 
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurant();
+    const contentContainer = document.querySelector('#content');
     const restaurantContainer = document.querySelector('#restaurants');
     const spinner = document.querySelector('#spinner');
 
@@ -28,6 +29,7 @@ const Favorite = {
       Spinner.hideSpinner(spinner);
     } catch (message) {
       Spinner.hideSpinner(spinner);
+      contentContainer.innerHTML += `<error-page></error-page>`;
       console.log(message);
     }
 

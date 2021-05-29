@@ -15,7 +15,6 @@ const Home = {
             </div>
             <div class="content" id="content">
                 ${document.querySelector('main').innerHTML = Spinner.showSpinner()}
-                <h2 class="content-heading"><span>Explore Restaurants</span></h2>
                 <div id="restaurants" class="restaurants">
                 
                 </div>
@@ -25,16 +24,19 @@ const Home = {
 
     async afterRender() {
         const restaurants = await RestaurantResource.restaurantList();
+        const contentContainer = document.querySelector('#content');
         const restaurantContainer = document.querySelector('#restaurants');
         const spinner = document.querySelector('#spinner');
         try {
             Spinner.showSpinner(spinner);
+            restaurantContainer.innerHTML += `<h2 class="content-heading"><span>Explore Restaurants</span></h2>`;
             restaurants.forEach((restaurant) => {
                 restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
             });
             Spinner.hideSpinner(spinner);
         } catch (message) {
             Spinner.hideSpinner(spinner);
+            contentContainer.innerHTML += `<error-page></error-page>`;
             console.log(message);
         }
 
