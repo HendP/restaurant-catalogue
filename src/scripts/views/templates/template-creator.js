@@ -39,10 +39,10 @@ const createRestaurantDetailTemplate = (restaurant) => `
   </div>
 `;
 
-const createRestaurantReview = (review) => `
+const createRestaurantReviewTemplate = (review) => `
   <div class="review-item">
     <div class="review-photo">
-    <box-icon size='60px' type='solid' name='user-circle'></box-icon>
+      <box-icon size='60px' type='solid' name='user-circle'></box-icon>
     </div>
     <div class="review-content">
       <div class="review-info">
@@ -52,12 +52,20 @@ const createRestaurantReview = (review) => `
       <p class="review-comment">${review.review}</p>
     </div>
   </div>
+`;
 
+const createFormReviewTemplate = () => `
+  <form class="form-review">
+    <label for="input-name">Name</label><br>
+    <input type="text" name="name" class="input-text" id="input-name" placeholder="Input name"><br>
+    <label for="input-review">Review</label><br>
+    <textarea name="review" class="input-textarea" id="input-review" placeholder="Input your review"></textarea><br>
+    <button type="submit" id="submit-review">Submit</button>
+  </form>
 `;
 
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant-item">
-    <a href="${`/#/detail/${restaurant.id}`}">
     <div class="restaurant-item-header">
         <img class="restaurant-item-header-image" alt="${restaurant.name}"
             src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
@@ -66,11 +74,10 @@ const createRestaurantItemTemplate = (restaurant) => `
         </div>
     </div>
     <div class="restaurant-item-content">
-        <h2>${restaurant.name}</h2>
+        <h2><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h2>
         <h5>📍 ${restaurant.city}</h5>
         <p>${restaurant.description}</p>
     </div>
-    </a>
   </div>
   `;
 
@@ -86,4 +93,4 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
-export { createRestaurantDetailTemplate, createRestaurantItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate, createRestaurantReview };
+export { createRestaurantDetailTemplate, createRestaurantItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate, createRestaurantReviewTemplate, createFormReviewTemplate };

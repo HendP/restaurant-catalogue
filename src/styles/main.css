@@ -74,41 +74,6 @@ body {
   font-size: 18px;
 }
 
-/* 
-  Hero Image 
-  */
-
-.hero-image {
-  display: flex;
-  align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/heros/hero-image_2.jpg");
-  width: 100%;
-  min-height: 420px;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.5);
-  text-align: center;
-}
-
-.hero-text {
-  margin: 0 auto;
-  max-width: 800px;
-  color: white;
-}
-
-.hero-title {
-  font-size: 42px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.hero-tagline {
-  font-size: 24px;
-}
-
 /*
     Main Content
 */
@@ -118,7 +83,7 @@ main {
 }
 
 .content {
-  padding: 32px;
+  padding: 16px;
   margin: 0 auto;
   min-height: 100%;
 }
@@ -237,7 +202,7 @@ main {
   margin: 0 auto;
   padding: 15px;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -313,12 +278,16 @@ main {
   align-items: stretch;
 }
 
+/* 
+  Review 
+*/
+
 .review-item {
   display: flex;
   flex-direction: row;
   width: 100%;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -347,6 +316,66 @@ main {
   padding-top: 3px;
 }
 
+/*
+    Form Review
+*/
+
+#form-review{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.form-review{
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form-review label,
+.form-review input,
+.form-review textarea {
+  margin-bottom: 10px;
+}
+
+.form-review label{
+  font-weight: 600;
+}
+
+.input-text, .input-textarea{
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  font-size: 16px;
+}
+
+.input-textarea{
+  height: 100px;
+}
+
+.input-text:focus, .input-textarea:focus{
+  outline: #f73859;
+}
+
+.form-review button {
+  background-color: #f73859;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  height: 45px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.form-review button:hover{
+  background-color: #ee2b4c;
+}
 /*
     Footer
 */
