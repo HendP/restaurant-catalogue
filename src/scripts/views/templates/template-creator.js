@@ -65,20 +65,22 @@ const createFormReviewTemplate = () => `
 `;
 
 const createRestaurantItemTemplate = (restaurant) => `
-  <div class="restaurant-item">
-    <div class="restaurant-item-header">
-        <img class="restaurant-item-header-image" alt="${restaurant.name}"
-            src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
-        <div class="restaurant-item-header-rating">
-            <p>⭐️<span class="restaurant-item-header-rating-score">${restaurant.rating}</span></p>
-        </div>
+  <a href="${`/#/detail/${restaurant.id}`}" class="link-navigation">
+    <div class="restaurant-item">
+      <div class="restaurant-item-header">
+          <img class="restaurant-item-header-image" alt="${restaurant.name}"
+              src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
+          <div class="restaurant-item-header-rating">
+              <p>⭐️<span class="restaurant-item-header-rating-score">${restaurant.rating}</span></p>
+          </div>
+      </div>
+      <div class="restaurant-item-content">
+          <h2>${restaurant.name}</h2>
+          <h5>📍 ${restaurant.city}</h5>
+          <p>${restaurant.description}</p>
+      </div>
     </div>
-    <div class="restaurant-item-content">
-        <h2><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h2>
-        <h5>📍 ${restaurant.city}</h5>
-        <p>${restaurant.description}</p>
-    </div>
-  </div>
+  </a>
   `;
 
 const createLikeButtonTemplate = () => `

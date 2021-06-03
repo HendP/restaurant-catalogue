@@ -71,7 +71,7 @@ body {
   padding: 8px;
   margin-bottom: 5px;
   width: 100%;
-  font-size: 18px;
+  font-size: 21px;
 }
 
 /*
@@ -194,6 +194,10 @@ main {
   -webkit-box-orient: vertical;
 }
 
+.link-navigation {
+  text-decoration: none;
+  color: #333;
+}
 /*
     Restaurant
 */
@@ -387,12 +391,7 @@ footer {
 
 footer p {
   text-align: center;
-  color: #aaaaaa;
-}
-
-footer p a {
   color: #f73859;
-  text-decoration: none;
 }
 
 /* 
