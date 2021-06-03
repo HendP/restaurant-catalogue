@@ -1,5 +1,5 @@
-import FavoriteRestaurantIdb from "../../data/favoriterestaurant-idb";
-import { createRestaurantItemTemplate } from "../templates/template-creator";
+import FavoriteRestaurantIdb from '../../data/favoriterestaurant-idb';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 import Spinner from '../../utils/spinner';
 
 const Favorite = {
@@ -29,11 +29,10 @@ const Favorite = {
       Spinner.hideSpinner(spinner);
     } catch (message) {
       Spinner.hideSpinner(spinner);
-      contentContainer.innerHTML += `<error-page></error-page>`;
+      contentContainer.innerHTML += '<error-page></error-page>';
       console.log(message);
     }
-
   },
-}
+};
 
 export default Favorite;

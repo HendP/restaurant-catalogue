@@ -1,12 +1,12 @@
-import './style.css'
+import './style.css';
 
 class HeroImage extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render(){
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
         <div class="hero-image">
             <div class="hero-text">
             <h1 class="hero-title">Good food and great vibes</h1>
@@ -16,7 +16,7 @@ class HeroImage extends HTMLElement {
             </div>
         </div>
         `;
-    }
+  }
 }
 
 customElements.define('hero-image', HeroImage);

@@ -1,10 +1,11 @@
+/* eslint-disable no-console */
 import RestaurantResource from '../../data/restaurant-resource';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 import Spinner from '../../utils/spinner';
 
 const Home = {
-    async render() {
-        const display = `
+  async render() {
+    const display = `
             <div class="hero-image">
                     <div class="hero-text">
                     <h1 class="hero-title">Good food and great vibes</h1>
@@ -20,26 +21,25 @@ const Home = {
                 
                 </div>
             </div>`;
-        return display;
-    },
+    return display;
+  },
 
-    async afterRender() {
-        const restaurants = await RestaurantResource.restaurantList();
-        const restaurantContainer = document.querySelector('#restaurants');
-        const spinner = document.querySelector('#spinner');
-        try {
-            Spinner.showSpinner(spinner);
-            restaurants.forEach((restaurant) => {
-                restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
-            });
-            Spinner.hideSpinner(spinner);
-        } catch (message) {
-            Spinner.hideSpinner(spinner);
-            contentContainer.innerHTML += `<error-page></error-page>`;
-            console.log(message);
-        }
-
+  async afterRender() {
+    const restaurants = await RestaurantResource.restaurantList();
+    const restaurantContainer = document.querySelector('#restaurants');
+    const spinner = document.querySelector('#spinner');
+    try {
+      Spinner.showSpinner(spinner);
+      restaurants.forEach((restaurant) => {
+        restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+      });
+      Spinner.hideSpinner(spinner);
+    } catch (message) {
+      Spinner.hideSpinner(spinner);
+      restaurantContainer.innerHTML += '<error-page></error-page>';
+      console.log(message);
     }
-}
+  },
+};
 
 export default Home;
