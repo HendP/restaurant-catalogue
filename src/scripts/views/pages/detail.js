@@ -26,11 +26,10 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantResource.detailRestaurant(url.id);
     const contentContainer = document.querySelector('#content');
-    const restaurantContainer = document.querySelector('#restaurant');
-    const spinner = document.querySelector('#spinner');
-    const restaurantReviewContainer = document.querySelector('#restaurant-review');
-
     try {
+      const restaurantContainer = document.querySelector('#restaurant');
+      const spinner = document.querySelector('#spinner');
+      const restaurantReviewContainer = document.querySelector('#restaurant-review');
       restaurantContainer.innerHTML = createRestaurantDetailTemplate(restaurant.restaurant);
       restaurant.restaurant.customerReviews.forEach((review) => {
         restaurantReviewContainer.innerHTML += createRestaurantReviewTemplate(review);

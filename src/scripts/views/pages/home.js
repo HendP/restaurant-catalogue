@@ -26,9 +26,9 @@ const Home = {
 
   async afterRender() {
     const restaurants = await RestaurantResource.restaurantList();
-    const restaurantContainer = document.querySelector('#restaurants');
-    const spinner = document.querySelector('#spinner');
     try {
+      const restaurantContainer = document.querySelector('#restaurants');
+      const spinner = document.querySelector('#spinner');
       Spinner.showSpinner(spinner);
       restaurants.forEach((restaurant) => {
         restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
