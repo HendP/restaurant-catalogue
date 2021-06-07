@@ -8,7 +8,7 @@ class ErrorPage extends HTMLElement {
   render() {
     this.innerHTML = `
         <div class="error-image">
-        <img src="/images/error/error.svg" alt="error"/>
+        <img id="error-img" src="/images/error/error.svg" alt="error"/>
         <p id="error-text">Data failed to load, please try again.</p>
         </div>
         `;

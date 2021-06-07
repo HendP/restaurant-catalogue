@@ -40,8 +40,8 @@
   "dependencies": {
     "boxicons": "^2.0.7",
     "idb": "^6.1.1",
+    "notyf": "^3.9.0",
     "regenerator-runtime": "^0.13.5",
-    "serviceworker-webpack-plugin": "^1.0.1",
-    "toastr": "^2.1.4"
+    "serviceworker-webpack-plugin": "^1.0.1"
   }
 }

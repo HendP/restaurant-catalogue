@@ -27,8 +27,8 @@ class App {
       this._content.innerHTML = await page.render();
       await page.afterRender();
     } catch (error) {
-      this._content.innerHTML += '<error-access></error-access>';
-      console.log(error);
+      this._content.innerHTML = '<error-page></error-page>';
+      document.getElementById('error-text').innerHTML = 'Page not found!';
     }
   }
 }

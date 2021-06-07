@@ -1,15 +1,36 @@
 /* eslint-disable no-underscore-dangle */
-import toastr from 'toastr';
+import { Notyf } from 'notyf';
 import RestaurantResource from '../data/restaurant-resource';
 import { createFormReviewTemplate } from '../views/templates/template-creator';
+
+const notyf = new Notyf({
+  duration: 1000,
+  position: {
+    x: 'center',
+    y: 'center',
+  },
+  types: [
+    {
+      type: 'warning',
+      background: 'orange',
+      duration: 2000,
+      icon: false
+    },
+    {
+      type: 'error',
+      background: 'red',
+    },
+    {
+      type: 'info',
+      background: '#20B2AA',
+    },
+  ],
+});
 
 const FormReviewInitiator = {
   async init({ formReview, id }) {
     this.formReview = formReview;
     this._id = id;
-    toastr.options = {
-      positionClass: 'toast-bottom-right',
-    };
     await this._renderFormReview();
   },
 
@@ -32,21 +53,35 @@ const FormReviewInitiator = {
       };
 
       if (name.value === '') {
-        toastr.error('Name cannot be empty!');
+        notyf.open({
+          type: 'warning',
+          message: 'Name cannot be empty!',
+        });
       } else if (review.value === '') {
-        toastr.error('Review cannot be empty!');
+        notyf.open({
+          type: 'warning',
+          message: 'Review cannot be empty!',
+        });
       } else {
         await RestaurantResource.reviewRestaurant(formReview);
         form.reset();
-        toastr.success('Review has been submit!');
+        notyf.open({
+          type: 'info',
+          message: 'Review has been submit!',
+        });
         this._renderReview(formReview.name, formReview.review);
       }
     });
   },
 
   _renderReview(name, review) {
-    const restaurantReviewContainer = document.querySelector('#restaurant-review');
-    const date = new Date().toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' });
+    const restaurantReviewContainer =
+      document.querySelector('#restaurant-review');
+    const date = new Date().toLocaleDateString('id-ID', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
 
     const reviewRestaurant = `
         <div class="review-item">

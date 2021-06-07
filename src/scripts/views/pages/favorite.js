@@ -32,6 +32,8 @@ const Favorite = {
       } else if (restaurants.length === 0) {
         Spinner.hideSpinner(spinner);
         contentContainer.innerHTML += '<error-page></error-page>';
+        document.querySelector('.content-heading').remove();
+        document.getElementById('error-img').src = '/images/error/empty.svg';
         document.getElementById('error-text').innerHTML = 'Favorite restaurant is empty!';
       }
     } catch (message) {

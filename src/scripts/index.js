@@ -2,7 +2,7 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
 import 'boxicons';
-import 'toastr/build/toastr.css';
+import 'notyf/notyf.min.css';
 
 import './components/hero-image/hero-image';
 import './components/error-page/error-page';
