@@ -1,0 +1,24 @@
+/* 
+  Error Access
+*/
+
+.error-image {
+    margin-top: 25%;
+    margin-bottom: 25%;
+  }
+  
+  .error-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 80px;
+  }
+  
+  .error-image p {
+    margin-top: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    text-align: center;
+  }
+  

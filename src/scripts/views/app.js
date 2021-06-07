@@ -23,8 +23,13 @@ class App {
   async renderPage() {
     const url = UrlParser.parserActiveUrlWithCombiner();
     const page = routes[url];
-    this._content.innerHTML = await page.render();
-    await page.afterRender();
+    try {
+      this._content.innerHTML = await page.render();
+      await page.afterRender();
+    } catch (error) {
+      this._content.innerHTML += '<error-access></error-access>';
+      console.log(error);
+    }
   }
 }
 

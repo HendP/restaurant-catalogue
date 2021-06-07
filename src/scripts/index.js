@@ -6,6 +6,7 @@ import 'toastr/build/toastr.css';
 
 import './components/hero-image/hero-image';
 import './components/error-page/error-page';
+import './components/error-access/error-access';
 
 import App from './views/app';
 import swRegister from './utils/sw-register';
