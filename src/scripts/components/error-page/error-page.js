@@ -9,7 +9,7 @@ class ErrorPage extends HTMLElement {
     this.innerHTML = `
         <div class="error-image">
         <img src="/images/error/error.svg" alt="error"/>
-        <p>Data failed to load, please try again.</p>
+        <p id="error-text">Data failed to load, please try again.</p>
         </div>
         `;
   }

@@ -21,3 +21,10 @@
   font-size: 28px;
   text-align: center;
 }
+
+@media screen and (min-width: 650px) {
+  .error-image {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

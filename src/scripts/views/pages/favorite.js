@@ -23,10 +23,17 @@ const Favorite = {
     const spinner = document.querySelector('#spinner');
 
     try {
-      restaurants.forEach((restaurant) => {
-        restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
-      });
-      Spinner.hideSpinner(spinner);
+      if (restaurants.length > 0) {
+        restaurants.forEach((restaurant) => {
+          restaurantContainer.innerHTML +=
+            createRestaurantItemTemplate(restaurant);
+        });
+        Spinner.hideSpinner(spinner);
+      } else if (restaurants.length === 0) {
+        Spinner.hideSpinner(spinner);
+        contentContainer.innerHTML += '<error-page></error-page>';
+        document.getElementById('error-text').innerHTML = 'Favorite restaurant is empty!';
+      }
     } catch (message) {
       Spinner.hideSpinner(spinner);
       contentContainer.innerHTML += '<error-page></error-page>';
