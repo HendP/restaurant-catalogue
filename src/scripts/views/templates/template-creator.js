@@ -76,7 +76,7 @@ const createRestaurantItemTemplate = (restaurant) => `
       </div>
       <div class="restaurant-item-content">
           <h2>${restaurant.name}</h2>
-          <h5>📍 ${restaurant.city}</h5>
+          <h3>📍 ${restaurant.city}</h3>
           <p>${restaurant.description}</p>
       </div>
     </div>

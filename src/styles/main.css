@@ -181,8 +181,9 @@ main {
   text-decoration: none;
 }
 
-.restaurant-item .restaurant-item-content h5 {
+.restaurant-item .restaurant-item-content h3 {
   margin: 0 0 10px 0;
+  font-size: 12px;
 }
 
 .restaurant-item .restaurant-item-content p {
