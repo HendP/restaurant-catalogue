@@ -1,7 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantResource from '../../data/restaurant-resource';
 import { createRestaurantDetailTemplate, createRestaurantReviewTemplate } from '../templates/template-creator';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 import Spinner from '../../utils/spinner';
 import FormReviewInitiator from '../../utils/form-review-initiator';
 
@@ -38,7 +38,7 @@ const Detail = {
         formReview: document.querySelector('#form-review'),
         id: restaurant.restaurant.id,
       });
-      await LikeButtonInitiator.init({
+      await LikeButtonPresenter.init({
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
         restaurant: {
           id: restaurant.restaurant.id,
