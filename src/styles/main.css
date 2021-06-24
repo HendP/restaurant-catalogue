@@ -17,7 +17,7 @@ body {
 
 .navbar {
   padding: 8px 16px;
-  background-color: #f73859;
+  background-color: #D83A56;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 10px;
@@ -60,7 +60,7 @@ body {
   width: 150px;
   transition: all 0.3s;
   padding: 8px;
-  background-color: #f73859;
+  background-color: #D83A56;
   overflow: hidden;
 }
 
@@ -160,7 +160,7 @@ main {
   bottom: 20px;
   left: 0;
   display: inline-block;
-  background-color: #f73859;
+  background-color: #D83A56;
   color: white;
 }
 
@@ -177,7 +177,7 @@ main {
 
 .restaurant-item .restaurant-item-content h2 {
   margin: 0 0 10px 0;
-  color: #f73859;
+  color: #D83A56;
   text-decoration: none;
 }
 
@@ -197,7 +197,7 @@ main {
 
 .link-navigation {
   text-decoration: none;
-  color: #333;
+  color: black;
 }
 /*
     Restaurant
@@ -221,7 +221,7 @@ main {
 .card-restaurant-detail .restaurant-title {
   overflow: hidden;
   font-size: 24px;
-  color: #f73859;
+  color: #D83A56;
   font-weight: 600;
   text-align: center;
   margin-bottom: 10px;
@@ -261,7 +261,7 @@ main {
 
 .card-restaurant-detail .category {
   display: inline-block;
-  background-color: #f73859;
+  background-color: #D83A56;
   padding: 5px 0;
   color: #fff;
   width: 30%;
@@ -363,11 +363,11 @@ main {
 }
 
 .input-text:focus, .input-textarea:focus{
-  outline: #f73859;
+  outline: #D83A56;
 }
 
 .form-review button {
-  background-color: #f73859;
+  background-color: #D83A56;
   color: white;
   border: none;
   border-radius: 5px;
@@ -392,7 +392,7 @@ footer {
 
 footer p {
   text-align: center;
-  color: #f73859;
+  color: #D83A56;
 }
 
 /* 
@@ -403,7 +403,7 @@ footer p {
   text-decoration: none;
   top: -40px;
   left: 0;
-  background-color: #f73859;
+  background-color: #D83A56;
   color: white;
   padding: 8px;
   z-index: 100;
@@ -422,7 +422,7 @@ footer p {
   position: fixed;
   bottom: 16px;
   right: 16px;
-  background-color: #f73859;
+  background-color: #D83A56;
   color: white;
   border: 0;
   border-radius: 50%;
@@ -448,7 +448,7 @@ footer p {
   width: 80px;
   height: 80px;
   border: 2px solid #f2f2f2;
-  border-top: 3px solid #f73859;
+  border-top: 3px solid #D83A56;
   border-radius: 100%;
   animation: spin 1s infinite linear;
 }
