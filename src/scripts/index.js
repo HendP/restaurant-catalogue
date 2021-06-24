@@ -3,6 +3,8 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import 'boxicons';
 import 'notyf/notyf.min.css';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 import './components/hero-image/hero-image';
 import './components/error-page/error-page';

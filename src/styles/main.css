@@ -152,6 +152,8 @@ main {
 .restaurant-item .restaurant-item-header .restaurant-item-header-image {
   width: 100%;
   height: 240px;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 .restaurant-item .restaurant-item-header .restaurant-item-header-rating {

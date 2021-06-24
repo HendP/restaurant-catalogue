@@ -6,17 +6,11 @@ import Spinner from '../../utils/spinner';
 const Home = {
   async render() {
     const display = `
-            <div class="hero-image">
-                    <div class="hero-text">
-                    <h1 class="hero-title">Good food and great vibes</h1>
-                    <p class="hero-tagline">
-                        So the only thing we're serious about is food
-                    </p>
-                    </div>
-            </div>
+            <hero-image></hero-image>
             <div class="content" id="content">
                 <h2 class="content-heading"><span>Explore Restaurants</span></h2>
-                ${document.querySelector('main').innerHTML = Spinner.showSpinner()}
+                ${(document.querySelector('main').innerHTML =
+                  Spinner.showSpinner())}
                 <div id="restaurants" class="restaurants">
                 
                 </div>
@@ -31,7 +25,8 @@ const Home = {
       const spinner = document.querySelector('#spinner');
       Spinner.showSpinner(spinner);
       restaurants.forEach((restaurant) => {
-        restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+        restaurantContainer.innerHTML +=
+          createRestaurantItemTemplate(restaurant);
       });
       Spinner.hideSpinner(spinner);
     } catch (message) {

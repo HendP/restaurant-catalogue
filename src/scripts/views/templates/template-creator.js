@@ -5,7 +5,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <h2 class="restaurant-title"><span>${restaurant.name}</span></h2>
     <div class="card-content">
       <div class="card-section image">
-        <img class="restaurant-image" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
+        <img class="restaurant-image lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
       </div>
       <div class="card-section information">
         <h3>Rating</h3>

@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/images/heros/hero-image_2.jpg");
+    url('/images/heros/hero-image_2.jpg');
   width: 100%;
   min-height: 420px;
   position: relative;
@@ -19,6 +19,8 @@
 
 .hero-text {
   margin: 0 auto;
+  padding-right: 5%;
+  padding-left: 5%;
   max-width: 800px;
   color: white;
 }
@@ -31,4 +33,14 @@
 
 .hero-tagline {
   font-size: 24px;
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-tagline {
+    font-size: 18px;
+  }
 }

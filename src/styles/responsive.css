@@ -1,13 +1,4 @@
 @media screen and (min-width: 280px) {
-
-  .hero-title {
-    font-size: 32px;
-  }
-
-  .hero-tagline {
-    font-size: 18px;
-  }
-
   .card-restaurant-detail .card-text {
     font-size: 12px;
   }
@@ -56,7 +47,7 @@
 
   .description {
     margin-top: 16px;
-    grid-column-start: 1; 
+    grid-column-start: 1;
     grid-column-end: 3;
     text-align: justify;
   }
