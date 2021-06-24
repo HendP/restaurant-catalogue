@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
+    "start": "node server.js",
+    "build-image": "node sharp.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
-    "e2e": "codeceptjs run --steps",
-    "start": "node server.js"
+    "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
   "author": "your_name <your.email@domain.com>",
@@ -38,6 +39,7 @@
     "sharp": "^0.28.3",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.0.9",
@@ -48,6 +50,7 @@
     "boxicons": "^2.0.7",
     "express": "^4.17.1",
     "idb": "^6.1.1",
+    "lazysizes": "^5.3.2",
     "notyf": "^3.9.0",
     "regenerator-runtime": "^0.13.5",
     "serviceworker-webpack-plugin": "^1.0.1"
