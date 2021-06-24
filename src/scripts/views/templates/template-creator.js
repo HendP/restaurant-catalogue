@@ -68,8 +68,8 @@ const createRestaurantItemTemplate = (restaurant) => `
   <a href="${`/#/detail/${restaurant.id}`}" class="link-navigation">
     <div class="restaurant-item">
       <div class="restaurant-item-header">
-          <img class="restaurant-item-header-image" alt="${restaurant.name}"
-              src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
+          <img class="restaurant-item-header-image lazyload" alt="${restaurant.name}"
+              data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
           <div class="restaurant-item-header-rating">
               <p>⭐️<span class="restaurant-item-header-rating-score">${restaurant.rating}</span></p>
           </div>
