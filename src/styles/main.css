@@ -260,6 +260,7 @@ main {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
+  margin-bottom: 50px;
   padding: 15px;
   background-color: white;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
@@ -331,8 +332,8 @@ footer p {
 .like {
   font-size: 18px;
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  bottom: 60px;
+  right: 30px;
   background-color: #d83a56;
   color: white;
   border: 0;
