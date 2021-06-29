@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('/images/heros/hero-image_2.jpg');
+    url('/images/hero-image_2-large.jpg');
   width: 100%;
   min-height: 420px;
   position: relative;
@@ -42,5 +42,12 @@
 
   .hero-tagline {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/hero-image_2-small.jpg');
   }
 }
