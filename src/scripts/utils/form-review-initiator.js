@@ -14,7 +14,7 @@ const notyf = new Notyf({
       type: 'warning',
       background: 'orange',
       duration: 2000,
-      icon: false
+      icon: false,
     },
     {
       type: 'error',
@@ -75,8 +75,7 @@ const FormReviewInitiator = {
   },
 
   _renderReview(name, review) {
-    const restaurantReviewContainer =
-      document.querySelector('#restaurant-review');
+    const restaurantReviewContainer = document.querySelector('#restaurant-review');
     const date = new Date().toLocaleDateString('id-ID', {
       year: 'numeric',
       month: 'long',

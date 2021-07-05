@@ -9,8 +9,7 @@ const Home = {
             <hero-image></hero-image>
             <div class="content" id="content">
                 <h2 class="content-heading"><span>Explore Restaurants</span></h2>
-                ${(document.querySelector('main').innerHTML =
-                  Spinner.showSpinner())}
+                ${(document.querySelector('main').innerHTML = Spinner.showSpinner())}
                 <div id="restaurants" class="restaurants">
                 
                 </div>
@@ -20,13 +19,13 @@ const Home = {
 
   async afterRender() {
     const restaurants = await RestaurantResource.restaurantList();
+    const restaurantContainer = document.querySelector('#restaurants');
+    const spinner = document.querySelector('#spinner');
     try {
-      const restaurantContainer = document.querySelector('#restaurants');
-      const spinner = document.querySelector('#spinner');
       Spinner.showSpinner(spinner);
       restaurants.forEach((restaurant) => {
-        restaurantContainer.innerHTML +=
-          createRestaurantItemTemplate(restaurant);
+        restaurantContainer.innerHTML
+          += createRestaurantItemTemplate(restaurant);
       });
       Spinner.hideSpinner(spinner);
     } catch (message) {

@@ -25,8 +25,7 @@ const Favorite = {
     try {
       if (restaurants.length > 0) {
         restaurants.forEach((restaurant) => {
-          restaurantContainer.innerHTML +=
-            createRestaurantItemTemplate(restaurant);
+          restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
         });
         Spinner.hideSpinner(spinner);
       } else if (restaurants.length === 0) {
