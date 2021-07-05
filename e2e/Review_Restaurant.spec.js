@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 Feature('Review Restaurant');
 
 Before(({ I }) => {

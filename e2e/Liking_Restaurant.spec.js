@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const assert = require('assert');
 
 Feature('Liking Restaurant');
@@ -23,7 +24,7 @@ Scenario('liking one restaurant', async ({ I }) => {
   const firstRestaurantName = await I.grabTextFrom(firstRestaurant);
 
   I.click(firstRestaurant);
-  
+
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
@@ -47,7 +48,7 @@ Scenario('unliking one restaurant', async ({ I }) => {
   const firstRestaurantName = await I.grabTextFrom(firstRestaurant);
 
   I.click(firstRestaurant);
-  
+
   I.seeElement('#likeButton');
   I.click('#likeButton');
 
@@ -68,5 +69,4 @@ Scenario('unliking one restaurant', async ({ I }) => {
   // Check favorite restaurant page
   I.amOnPage('/#/favorite');
   I.see('Favorite restaurant is empty!', '#error-text');
-
 });
